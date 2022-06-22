@@ -1,0 +1,14 @@
+.projectsContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    grid-gap: 10px;
+}
+
+/*
+.projectsContainer__blog::-webkit-scrollbar {
+    width: 0 !important
+}
+*/
