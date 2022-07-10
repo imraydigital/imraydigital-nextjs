@@ -63,12 +63,12 @@ const LandingPageHero = () => {
         <div className={styles.landingPageHero__container}>
             <div className={styles.landingPageHero__inner}>
                 <div className={styles.landingPageHero__innerLeft}>
-                    <Transition in={loadNavigation} timeout={300} mountOnEnter>
+                    <Transition in={loadNavigation} timeout={400} mountOnEnter>
                         {state => {
                             return <Image src={'/logo-white.svg'} height={120} width={120} style={{
                                 opacity: state === 'entered' ? 1 : 0,
                                 transform: state === 'entered' ? 'translateY(0)' : 'translateY(-200px)',
-                                transition: 'all ease-in 300ms',
+                                transition: 'all ease-in 400ms',
                             }} />
                         }
                         }
@@ -78,8 +78,6 @@ const LandingPageHero = () => {
                     <Transition in={loadTitle} timeout={300} mountOnEnter>
                         {state => {
                             return <h1 style={{
-                                color: '#FFF',
-                                fontSize: 120,
                                 opacity: state === 'entered' ? 1 : 0,
                                 transform: state === 'entered' ? 'translateX(0)' : 'translateX(-500px)',
                                 transition: 'all ease-in 300ms'
@@ -103,17 +101,17 @@ const LandingPageHero = () => {
                     <Transition in={loadNavigation} timeout={500} mountOnEnter>
                         {state => {
                             return (
-                                <ul className={styles.landingPageHero__navigation} id='navList' style={{
+                                <ul className={styles.landingPageHero__socials} id='navList' style={{
                                     opacity: state === 'entered' ? 1 : 0,
                                     transform: state === 'entered' ? 'translateX(0)' : 'translateX(200px)',
                                     transition: 'all ease-in 500ms'
                                 }}>
-                                    <li className={animate.fb ? styles.animateItem : null}><Image src={'/facebook.svg'} height={30} width={30} /></li>
-                                    <li className={animate.ig ? styles.animateItem : null}><Image src={'/instagram.svg'} height={30} width={30} /></li>
-                                    <li className={animate.li ? styles.animateItem : null}><Image src={'/linkedin.svg'} height={30} width={30} /></li>
-                                    <li className={animate.gh ? styles.animateItem : null}><Image src={'/github.svg'} height={30} width={30} /></li>
-                                    <li className={animate.tw ? styles.animateItem : null}><Image src={'/twitter.svg'} height={35} width={35} /></li>
-                                    <li className={animate.yt ? styles.animateItem : null}><Image src={'/youtube.svg'} height={30} width={30} /></li>
+                                    <li className={animate.fb ? styles.animateItem : null}><a href="https://facebook.com/imraydigital" target="_blank"><Image src={'/facebook.svg'} height={30} width={30} /></a></li>
+                                    <li className={animate.ig ? styles.animateItem : null}><a href="https://instagram.com/imraydigital" target="_blank"><Image src={'/instagram.svg'} height={30} width={30} /></a></li>
+                                    <li className={animate.li ? styles.animateItem : null}><a href="https://www.linkedin.com/in/liam-imray-35b4688b/" target="_blank"><Image src={'/linkedin.svg'} height={30} width={30} /></a></li>
+                                    <li className={animate.gh ? styles.animateItem : null}><a href="https://github.com/imraydigital" target="_blank"><Image src={'/github.svg'} height={30} width={30} /></a></li>
+                                    <li className={animate.tw ? styles.animateItem : null}><a href="https://twitter.com/imraydigital" target="_blank"><Image src={'/twitter.svg'} height={35} width={35} /></a></li>
+                                    <li className={animate.yt ? styles.animateItem : null}><a href="https://www.youtube.com/channel/UCeWEkoRUM29nYNHKvIlnvYQ" target="_blank"><Image src={'/youtube.svg'} height={30} width={30} /></a></li>
                                 </ul>
                             )
                         }

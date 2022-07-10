@@ -7,6 +7,7 @@
     justify-content: center;
     padding: 80px;
     background-color: #000238;
+    overflow-x: hidden;
 }
 
 .landingPageHero__inner {
@@ -23,7 +24,7 @@
     align-items: center;
     justify-content: flex-start;
     flex: 1;
-    padding-top: 20px;
+    padding: 20px 0px 0px 20px;
 }
 
 .landingPageHero__innerLeft img {
@@ -37,6 +38,11 @@
     justify-content: center;
     flex: 4;
     position: relative;
+}
+
+.landingPageHero__innerCenter h1 {
+    color: #FFF;
+    font-size: 120px;
 }
 
 .landingPageHero__innerCenter h4 {
@@ -55,6 +61,7 @@
     align-items: center;
     justify-content: space-between;
     animation: scaleItem 600ms 1500ms 2;
+    margin-top: 10px;
 }
 
 .subtitleContainer:hover {
@@ -70,7 +77,7 @@
     padding: 50px 30px 0px 0px;
 }
 
-.landingPageHero__navigation {
+.landingPageHero__socials {
     list-style-type: none;
     display: flex;
     flex-direction: column;
@@ -78,7 +85,7 @@
     justify-content: flex-start;
 }
 
-.landingPageHero__navigation li {
+.landingPageHero__socials li {
     margin-top: 20px;
     cursor: pointer;
     transition: all ease-in 150ms;
@@ -88,7 +95,7 @@
     width: 50px;
 }
 
-.landingPageHero__navigation li:hover {
+.landingPageHero__socials li:hover {
     transform: scale(1.5);
 }
 
@@ -107,5 +114,48 @@
 
     100% {
         transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .landingPageHero__container {
+        padding: 20px;
+    }
+
+
+    .landingPageHero__innerLeft {
+        padding: 20px 0px 0px 0px;
+    }
+
+    .landingPageHero__inner {
+        flex-direction: column;
+    }
+
+    .landingPageHero__innerCenter {
+        flex: 3;
+    }
+
+    .landingPageHero__innerCenter>h1 {
+        font-size: 60px;
+    }
+
+    .landingPageHero__innerRight {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        flex: 2;
+    }
+
+    .landingPageHero__socials {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: 0px 0px 20px 0px;
+    }
+
+    .subtitleContainer {
+        padding: 0;
     }
 }

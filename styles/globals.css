@@ -19,4 +19,5 @@ a {
 
 body {
   background-color: #FFF;
+  overflow-x: hidden;
 }
