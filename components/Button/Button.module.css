@@ -1,0 +1,20 @@
+.btn {
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    transition: all ease-in 200ms;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn__primary {
+    background-color: #FFAA00;
+}
+
+.btn__alt {
+    background-clip: #000011;
+}

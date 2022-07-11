@@ -5,12 +5,17 @@
     min-height: 800px;
     height: 100%;
     position: relative;
+    overflow: scroll;
 }
 
 .projectContainer>div{
     display: flex;
     flex-basis: 1 1 100%;
     flex-wrap: wrap;
+}
+
+.projectContainer>.projectContainer__images {
+    gap: 10px;
 }
 
 .projectContainer:nth-child(even)>.projectContainer__images {
@@ -22,7 +27,6 @@
     width: 60%;
     height: 70%;
     z-index: 91;
-    gap: 10px;
 }
 
 .projectContainer:nth-child(even)>.projectContainer__desc {
@@ -32,7 +36,7 @@
     left: 0;
     width: 60%;
     height: 60%;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: #EFEFEF;
     z-index: 90;
     align-items: flex-start;
     justify-content: flex-start;
@@ -56,7 +60,7 @@
     right: 0;
     width: 60%;
     height: 60%;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: #EFEFEF;
     z-index: 90;
     align-items: flex-start;
     justify-content: flex-end;
@@ -69,7 +73,7 @@
 
 .project__featuredImage {
     flex: 2;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: #D9D9D9;
 }
 
 .project__subImageContainer {
@@ -83,20 +87,21 @@
 
 .project__subImage {
     flex: 1 1;
-    background-color: rgba(0, 0, 0, 0.4);
-    height: 70%;
+    background-color: #D9D9D9;
+    height: 70%;    
+    aspect-ratio: 4/3;
 }
 
 @media screen and (max-width: 1279px) {
     .projectContainer {
         flex-direction: column;
-        gap: 20px;
+        gap: 0px;
     }
 
     .projectContainer>.projectContainer__images{
         position: static !important;
         z-index: auto !important;
-        flex: 3;
+        flex: 2;
         top: auto !important;
         right: auto !important;
         left: auto !important;

@@ -1,0 +1,109 @@
+.testimonialsSection__wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 120px 80px;
+    background-color: #000238;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.testimonialsSection__wrapper>h1 {
+    color: #FFF;
+    padding: 80px 40px 160px 40px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    font-size: 40px;
+}
+
+.testimonialsSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+}
+
+.testimonialsSection::-webkit-scrollbar {
+    display: none;
+}
+
+.testimonialsSection>div {
+    min-height: 300px;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all ease-in 200ms;
+}
+
+.testimonialsSection>div:hover {
+    transform: scale(1.01);
+}
+
+.testimonialsSection>div:nth-child(1) {
+    grid-column: 1/3;
+    display: flex;
+    background-color: #0031FF;
+    color: #FFF;
+}
+
+.testimonialsSection>div:nth-child(even) {
+    background-color: #FFF;
+}
+
+.testimonialsSection>div:nth-child(3) {
+    background-color: #FFAA00;
+    grid-row: span 2;
+}
+
+.testimonialsSection>div:nth-child(5) {
+    background-color: #0031FF;
+    grid-column: 2/4;
+    color: #FFF;
+}
+
+@media screen and (max-width: 800px) {
+
+    .testimonialsSection__wrapper {
+        padding: 120px 0px;
+    }
+
+    .testimonialsSection {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        overflow-x: scroll;
+        width: 100%;
+        height: auto;
+        gap: 10px;
+    }
+
+    .testimonialsSection__wrapper>h1 {
+        font-size: 3rem;
+        text-align: center;
+        line-height: 1.5;
+        font-weight: 100;
+    }
+
+    .testimonialsSection>div {
+        min-width: 90%;
+    }
+
+    .testimonialsSection>div:nth-child(1) {
+        margin-left: 5px;
+    }
+
+    .testimonialsSection>div:last-child {
+        margin-right: 5px;
+    }
+
+    .testimonialsSection>div:hover {
+        transform: none;
+    }
+}
